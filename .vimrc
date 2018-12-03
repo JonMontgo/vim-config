@@ -20,7 +20,9 @@ Plugin 'git@github.com:scrooloose/nerdtree.git'
 Plugin 'git@github.com:w0rp/ale.git'
 Plugin 'git@github.com:Valloric/YouCompleteMe.git'
 Plugin 'git@github.com:pangloss/vim-javascript.git'
-Plugin 'git@github.com:terryma/vim-multiple-cursors.git' 
+" Plugin 'git@github.com:terryma/vim-multiple-cursors.git' 
+Plugin 'git@github.com:jiangmiao/auto-pairs.git' 
+Plugin 'git@github.com:tpope/vim-surround.git'
 
 " ...
 
