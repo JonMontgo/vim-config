@@ -70,10 +70,14 @@ let g:lightline = {
 set background=dark
 
 " Nerd tree config
-" map <C-n> :NERDTreeToggle<CR>
+nmap <C-\> :NERDTreeToggle<CR>
 
 " Easy Split Movements
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" Tab next and previous
+map <a-PageUp> :tabn<CR>
+map <a-PageDown> :tabp<CR>
