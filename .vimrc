@@ -23,6 +23,7 @@ Plugin 'git@github.com:pangloss/vim-javascript.git'
 " Plugin 'git@github.com:terryma/vim-multiple-cursors.git' 
 Plugin 'git@github.com:jiangmiao/auto-pairs.git' 
 Plugin 'git@github.com:tpope/vim-surround.git'
+Plugin 'git@github.com:airblade/vim-gitgutter.git'
 
 " ...
 
@@ -41,7 +42,7 @@ set number
 set expandtab  " Tab becomes spaces
 set softtabstop=2 " When tab key is hit insert 2 spaces
 set shiftwidth=2 " When indentation is filled in use 2 spaces
-
+set smartindent
 
 " Set line length guide (80 chars)
 set colorcolumn=80
