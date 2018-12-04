@@ -46,7 +46,7 @@ set smartindent
 
 " Set line length guide (80 chars)
 set colorcolumn=80
-highlight ColorColumn ctermbg=10 " Solarized theme spcific
+highlight ColorColumn ctermbg=10 " Solarized theme specific
 
 " Folding settings
 "set foldmethod=syntax "syntax highlighting items specify the folds
