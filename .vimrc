@@ -24,6 +24,7 @@ Plugin 'git@github.com:pangloss/vim-javascript.git'
 Plugin 'git@github.com:jiangmiao/auto-pairs.git' 
 Plugin 'git@github.com:tpope/vim-surround.git'
 Plugin 'git@github.com:airblade/vim-gitgutter.git'
+Plugin 'git@github.com:scrooloose/nerdcommenter.git'
 
 " ...
 
