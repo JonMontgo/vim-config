@@ -25,6 +25,8 @@ Plugin 'git@github.com:jiangmiao/auto-pairs.git'
 Plugin 'git@github.com:tpope/vim-surround.git'
 Plugin 'git@github.com:airblade/vim-gitgutter.git'
 Plugin 'git@github.com:scrooloose/nerdcommenter.git'
+Plugin 'git@github.com:wesQ3/vim-windowswap.git'
+Plugin 'git@github.com:Vimjas/vim-python-pep8-indent.git'
 
 " ...
 
@@ -43,7 +45,7 @@ set number
 set expandtab  " Tab becomes spaces
 set softtabstop=2 " When tab key is hit insert 2 spaces
 set shiftwidth=2 " When indentation is filled in use 2 spaces
-set smartindent
+" set smartindent
 
 " Set line length guide (80 chars)
 set colorcolumn=80
@@ -83,3 +85,7 @@ nnoremap <C-H> <C-W><C-H>
 " Tab next and previous
 map <a-PageUp> :tabn<CR>
 map <a-PageDown> :tabp<CR>
+
+" Ale specific config
+let g:ale_fixers={ 'javascript': ['eslint'] }
+
