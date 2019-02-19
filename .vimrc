@@ -29,10 +29,12 @@ Plugin 'git@github.com:wesQ3/vim-windowswap.git'
 Plugin 'git@github.com:Vimjas/vim-python-pep8-indent.git'
 
 " ...
-
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+" Setup clipboard support
+set clipboard=unnamedplus
 
 " Split Settings
 set splitbelow
@@ -49,7 +51,7 @@ set shiftwidth=2 " When indentation is filled in use 2 spaces
 
 " Set line length guide (80 chars)
 set colorcolumn=80
-highlight ColorColumn ctermbg=10 " Solarized theme specific
+highlight ColorColumn ctermbg=8 " Solarized theme specific
 
 " Folding settings
 "set foldmethod=syntax "syntax highlighting items specify the folds
@@ -87,5 +89,12 @@ map <a-PageUp> :tabn<CR>
 map <a-PageDown> :tabp<CR>
 
 " Ale specific config
-let g:ale_fixers={ 'javascript': ['eslint'] }
+let g:ale_linters ={'python': ['flake8']}
+let g:ale_fixers={'javascript': ['eslint']}
 
+" Close autocompletion preview window after done
+autocmd CompleteDone * pclose
+
+" You complete me settings
+let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+let g:ycm_semantic_triggers = {'c': ['re!\w{2}']}
