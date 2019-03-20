@@ -20,13 +20,13 @@ Plugin 'git@github.com:scrooloose/nerdtree.git'
 Plugin 'git@github.com:w0rp/ale.git'
 Plugin 'git@github.com:Valloric/YouCompleteMe.git'
 Plugin 'git@github.com:pangloss/vim-javascript.git'
-" Plugin 'git@github.com:terryma/vim-multiple-cursors.git' 
 Plugin 'git@github.com:jiangmiao/auto-pairs.git' 
 Plugin 'git@github.com:tpope/vim-surround.git'
 Plugin 'git@github.com:airblade/vim-gitgutter.git'
 Plugin 'git@github.com:scrooloose/nerdcommenter.git'
 Plugin 'git@github.com:wesQ3/vim-windowswap.git'
 Plugin 'git@github.com:Vimjas/vim-python-pep8-indent.git'
+Plugin 'fatih/vim-go'
 
 " ...
 " All of your Plugins must be added before the following line
@@ -36,7 +36,10 @@ filetype plugin indent on    " required
 " Setup clipboard support
 set clipboard=unnamedplus
 
-" Split Settings
+" Ensure syntax highlighting
+syntax on
+
+" Split Settings go below or to the right
 set splitbelow
 set splitright
 
@@ -47,6 +50,7 @@ set number
 set expandtab  " Tab becomes spaces
 set softtabstop=2 " When tab key is hit insert 2 spaces
 set shiftwidth=2 " When indentation is filled in use 2 spaces
+set tabstop=4 " Tab characters are interpreted as 4 spaces
 " set smartindent
 
 " Set line length guide (80 chars)
