@@ -93,7 +93,10 @@ map <a-PageUp> :tabn<CR>
 map <a-PageDown> :tabp<CR>
 
 " Ale specific config
-let g:ale_linters ={'python': ['flake8']}
+let g:ale_linters ={
+\  'python': ['flake8'],
+\  'javascript': ['eslint']
+\}
 let g:ale_fixers={'javascript': ['eslint']}
 
 " Close autocompletion preview window after done
