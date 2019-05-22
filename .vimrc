@@ -26,6 +26,7 @@ Plugin 'git@github.com:airblade/vim-gitgutter.git'
 Plugin 'git@github.com:scrooloose/nerdcommenter.git'
 Plugin 'git@github.com:wesQ3/vim-windowswap.git'
 Plugin 'git@github.com:Vimjas/vim-python-pep8-indent.git'
+Plugin 'git@github.com:tmhedberg/SimpylFold.git'
 Plugin 'fatih/vim-go'
 
 " ...
@@ -58,8 +59,8 @@ set colorcolumn=80
 highlight ColorColumn ctermbg=8 " Solarized theme specific
 
 " Folding settings
-"set foldmethod=syntax "syntax highlighting items specify the folds
-set foldcolumn=2 "defineds 1 col at window left to indicate folding
+set foldmethod=syntax "syntax highlighting items specify the folds
+set foldcolumn=2 "defines 1 col at window left to indicate folding
 set foldlevelstart=99 "start file with all folds open
 
 " Vim-Javascript config
@@ -99,9 +100,10 @@ let g:ale_linters ={
 \}
 let g:ale_fixers={'javascript': ['eslint']}
 
-" Close autocompletion preview window after done
-autocmd CompleteDone * pclose
-
 " You complete me settings
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
-let g:ycm_semantic_triggers = {'c': ['re!\w{2}']}
+let g:ycm_semantic_triggers = {
+\  'python': ['re!\w{2}'],
+\  'javascript': ['re!\w{2}']
+\}
+let g:ycm_autoclose_preview_window_after_insertion = 1
