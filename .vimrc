@@ -13,7 +13,6 @@ Plugin 'gmarik/Vundle.vim'
 
 " add all your plugins here (note older versions of Vundle
 " used Bundle instead of Plugin)
-Plugin 'git@github.com:itchyny/lightline.vim.git'
 Plugin 'git@github.com:junegunn/fzf.vim.git'
 Plugin 'git@github.com:junegunn/fzf.git'
 Plugin 'git@github.com:scrooloose/nerdtree.git'
@@ -28,6 +27,7 @@ Plugin 'git@github.com:wesQ3/vim-windowswap.git'
 Plugin 'git@github.com:Vimjas/vim-python-pep8-indent.git'
 Plugin 'git@github.com:tmhedberg/SimpylFold.git'
 Plugin 'fatih/vim-go'
+Plugin 'leafgarland/typescript-vim'
 
 " ...
 " All of your Plugins must be added before the following line
@@ -58,6 +58,9 @@ set tabstop=4 " Tab characters are interpreted as 4 spaces
 set colorcolumn=80
 highlight ColorColumn ctermbg=8 " Solarized theme specific
 
+" Let's get powerline
+set rtp+=$VIM_POWER_BINDING
+
 " Folding settings
 set foldmethod=syntax "syntax highlighting items specify the folds
 set foldcolumn=2 "defines 1 col at window left to indicate folding
@@ -70,14 +73,8 @@ augroup javascript_folding
     au FileType javascript setlocal foldmethod=syntax
 augroup END
 
-" Light rail config
+" Right solarized foreground colors and always show status bar
 set laststatus=2
-if !has('gui_running')
-  set t_Co=256
-endif
-let g:lightline = {
-      \ 'colorscheme': 'solarized'
-      \ }
 set background=dark
 
 " Nerd tree config
@@ -96,14 +93,19 @@ map <a-PageDown> :tabp<CR>
 " Ale specific config
 let g:ale_linters ={
 \  'python': ['flake8'],
-\  'javascript': ['eslint']
+\  'javascript': ['eslint'],
+\  'typescript': ['tslint']
 \}
-let g:ale_fixers={'javascript': ['eslint']}
+let g:ale_fixers={
+\   'javascript': ['eslint'],
+\   'typescript': ['tslint']
+\}
 
 " You complete me settings
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 let g:ycm_semantic_triggers = {
 \  'python': ['re!\w{2}'],
-\  'javascript': ['re!\w{2}']
+\  'javascript': ['re!\w{2}'],
+\  'typescript': ['re!\w{2}']
 \}
 let g:ycm_autoclose_preview_window_after_insertion = 1
