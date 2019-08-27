@@ -80,6 +80,13 @@ set background=dark
 " Nerd tree config
 nmap <C-\> :NERDTreeToggle<CR>
 
+" Fuzzy file
+let g:fzf_action={
+\  'ctrl-t': 'tab split',
+\  'ctrl-i': 'split',
+\  'ctrl-s': 'vsplit'
+\}
+
 " Easy Split Movements
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -93,12 +100,12 @@ map <a-PageDown> :tabp<CR>
 " Ale specific config
 let g:ale_linters ={
 \  'python': ['flake8'],
-\  'javascript': ['eslint'],
+\  'javascript': ['eslint', 'tslint'],
 \  'typescript': ['tslint']
 \}
 let g:ale_fixers={
-\   'javascript': ['eslint'],
-\   'typescript': ['tslint']
+\   'javascript': ['eslint', 'prettier', 'tslint'],
+\   'typescript': ['prettier', 'tslint']
 \}
 
 " You complete me settings
