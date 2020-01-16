@@ -19,6 +19,7 @@ Plugin 'git@github.com:scrooloose/nerdtree.git'
 Plugin 'git@github.com:w0rp/ale.git'
 Plugin 'git@github.com:Valloric/YouCompleteMe.git'
 Plugin 'git@github.com:pangloss/vim-javascript.git'
+Plugin 'git@github.com:mxw/vim-jsx'
 Plugin 'git@github.com:jiangmiao/auto-pairs.git' 
 Plugin 'git@github.com:tpope/vim-surround.git'
 Plugin 'git@github.com:airblade/vim-gitgutter.git'
@@ -94,8 +95,8 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " Tab next and previous
-map <a-PageUp> :tabn<CR>
-map <a-PageDown> :tabp<CR>
+map <C-PageUp> :tabn<CR>
+map <C-PageDown> :tabp<CR>
 
 " Ale specific config
 let g:ale_linters ={
@@ -104,7 +105,7 @@ let g:ale_linters ={
 \  'typescript': ['tslint']
 \}
 let g:ale_fixers={
-\   'javascript': ['eslint', 'prettier', 'tslint'],
+\   'javascript': ['prettier','eslint'],
 \   'typescript': ['prettier', 'tslint']
 \}
 
@@ -115,4 +116,4 @@ let g:ycm_semantic_triggers = {
 \  'javascript': ['re!\w{2}'],
 \  'typescript': ['re!\w{2}']
 \}
-let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 0
